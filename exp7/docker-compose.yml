@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - backend
+
+  backend:
+    build: .
+
+networks:
+  default:
+    driver: bridge

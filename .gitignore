@@ -1,0 +1,5 @@
+.minikube/
+.ssh/
+*.tar
+*.lz4
+*.log
